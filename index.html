@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Dodge game</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+    <header><h1>Dodge Game</h1></header>
+
+    <ul>
+        <li>It is a simple game to dodge the bird by waking it up and make it fly.</li>
+        <li>If nothing is done, the bird will fall back to sleep and lower its' altitude.</li>
+        <li>If the bird is hit by the fire balls coming toward it, the game is over.</li>
+        <li>The fire balls gets faster as time passes.</li>
+        <li>The game can always restart after the game over, but not during the play.</li>
+        <li>The upper right side of screen will show the time of survival and game over screen will show the record.</li>
+        <li>The fire balls always come out within the screen so if the bird goes above the screen, it won't get a hit.</li>
+        <li>The bird can go up above the screen, but does not infinitly increase its' height.</li>
+        <li>The color range of fire balls can be changed with 'Settings' and they are shown on the upper rightside of the screen.</li>
+    </ul>
+
+    <div class="dropdown">
+        <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown">Settings</button>
+        <div class="dropdown-menu">
+            <h6 class="dropdown-header">Color setting 1</h6>
+            <div class="slidecontainer">
+                <input type="range" min="0" max="=100" value="100" class="R" id="Rval"><br>
+                <input type="range" min="0" max="=100" value="0" class="G" id="Gval"><br>
+                <input type="range" min="0" max="=100" value="0" class="B" id="Bval"><br>
+            </div>
+            <h6 class="dropdown-header">Color setting 2</h6>
+            <div class="slidecontainer">
+                <input type="range" min="0" max="=100" value="100" class="R" id="Rval2"><br>
+                <input type="range" min="0" max="=100" value="80" class="G" id="Gval2"><br>
+                <input type="range" min="0" max="=100" value="0" class="B" id="Bval2"><br>
+            </div>
+        </div>
+    </div>
+    <script src="Game.js"></script>
+</body>
+</html>
